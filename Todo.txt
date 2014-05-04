@@ -1,0 +1,3 @@
+1. Find out the number of rest days
+2. Find out the number of hero/ named wods
+3. Find out keywords occurrence per month
