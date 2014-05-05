@@ -1,0 +1,7 @@
+++Packages installed for this project
++Numpy
++Scipy
++Matplotlib
++urllib2
++beautiful soup
+
