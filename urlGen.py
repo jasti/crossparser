@@ -6,7 +6,7 @@ Created on May 23, 2013
 
 def generateURL():
     crossfitBaseUrl = 'http://www.crossfit.com/mt-archive2/YYYY_MM.html'
-    yearRange = range(2006,2014)
+    yearRange = range(2006,2015)
     monthRange = ['01','02','03','04','05','06','07','08','09','10','11','12']
     crossfitUrls=[];
     for year in yearRange:

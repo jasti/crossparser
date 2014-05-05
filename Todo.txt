@@ -1,3 +1,16 @@
-1. Find out the number of rest days
-2. Find out the number of hero/ named wods
-3. Find out keywords occurrence per month
+1. Find out the number of rest days over time
+2. Find out the number of hero/ named wods over time
+3. Find out keywords occurrence per month 
+4. For time vs as many rounds as possible vs not for time
+
+
+Approach :
+* Construct URLS
+* Grab the content using the URLs
+* Write to File
+* Read from file each section and construct spreadsheet with daily data
+* Parse date and split to day, year and month
+* Add additional columns with information about rest days vs hero wod 
+* Analyse individual blobs of information using one of the ML tools
+
+
