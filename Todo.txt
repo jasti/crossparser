@@ -14,3 +14,20 @@ Approach :
 * Analyse individual blobs of information using one of the ML tools
 
 
+
+print df['Date']
+
+
+df['Year'],df['Month'],df['Day'] = zip(*df['Date'].map(cpu.splitDate))
+
+
+print df.describe()
+dfRest=df[df.Workout== "Rest Day\n"]
+
+gb_year =dfRest.groupby('Year')
+print gb_year.size()
+
+df.dropna()
+df[df['Workout'].str.contains("For time")]
+
+
