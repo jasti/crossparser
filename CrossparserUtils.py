@@ -15,7 +15,8 @@ import csv
 # Generates URLS that need to be queried for workouts
 def generateURL():
     crossfitBaseUrl = 'http://www.crossfit.com/mt-archive2/YYYY_MM.html'
-    yearRange = range(2002, 2014)
+    yearRange = ["2005","2007","2008","2009","2010","2011","2012","2013"]
+    #yearRange = range(2002, 2014)
     monthRange = ['01','02','03','04','05','06','07','08','09','10','11','12']
     #monthRange = ['01']
     crossfitUrls = [];
@@ -42,11 +43,29 @@ def splitDate(date):
         print "Bad Date encountered : " + strDate
         return [np.NaN,np.NaN,np.NaN]
     
+def listFromDf(df):
+    data = []
+    for row in df.iteritems():
+        rowList = list(row)
+        data.append(rowList)
+    return data
+
+def writeToFile(file_name,header,delim,data):
+    with open(file_name, "w+") as f:
+        output = csv.writer(f, delimiter = delim)
+        output.writerow(header)
+        for line in data :
+            intLines = [int(i) for i in line]
+            output.writerow(intLines);
+        
+        
+    
+    
 def parseSite():
     urls = generateURL();
 #print urls
 
-    with open("workouts.tsv", "w") as f:
+    with open("workouts_2005.tsv", "w") as f:
         fieldnames = ("Date", "Workout")
         output = csv.writer(f, delimiter="\t")
         output.writerow(fieldnames)
@@ -95,3 +114,4 @@ def parseSite():
 
     
     
+
